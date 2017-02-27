@@ -64,6 +64,11 @@ void quick_sort(int* A, int start, int end)
 
 	int p = Partition(A, start, end);
 
+	if( p >= end) // if partition reaches end that means array is sorted
+	{
+		return;
+	}
+
 	quick_sort(A, start, p);
 	quick_sort(A, p+1, end);
 }
