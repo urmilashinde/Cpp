@@ -34,7 +34,7 @@ void printMatrix(int *matrix, int max_rw, int max_col)
     {
         for(int j=0; j<max_col; j++)
         {
-            std::cout << matrix[(max_rw*i)+j] << "\t";
+            std::cout << matrix[(max_col*i)+j] << "\t";
         }
         std::cout << std::endl;
     }
