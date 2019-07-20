@@ -16,7 +16,7 @@ void populateMatrix(int *matrix, int max_rw, int max_col)
     {
         for(int j=0; j<max_col; j++)
         {
-            matrix[(max_rw*i)+j]=1;
+            matrix[(max_col*i)+j]=1;
         }
     }
     
