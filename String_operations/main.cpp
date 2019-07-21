@@ -32,12 +32,17 @@ void Reverse(char *str)
 
 int atoi(char *str)
 {
-    int result = 0;
+    int num, result = 0;
+    int mult = 1;
     
-    for(int i=0; str[i] != '\0'; i++)
+    int len = strlen(str);
+    
+    for(int i = (len-1); i <= 0; i--)
     {
-        result = result*10 + str[i] - '0';
-    }
+        num = str[i] - '0';
+        result = num * mult + result;
+        mult = mult * 10;
+    }   
     
     return result;
 }
@@ -61,7 +66,7 @@ char* itoa(int num)
     
     printf("length of number is %d \n", len);
     
-    k = len - 1;
+    k = len;
     
     for(int j=0; num>0; j++)
     {
@@ -71,6 +76,7 @@ char* itoa(int num)
         
     }
     
+    result[k] = '\0';
     return result;
 }
 
